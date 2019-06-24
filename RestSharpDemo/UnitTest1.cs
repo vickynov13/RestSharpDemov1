@@ -130,6 +130,7 @@ namespace RestSharpDemo
             Console.Write("\nmeme : " + Variables.meme);
             String status = "Fail", percent = "49%", failedval = "all", inputjson = Variables.InputJson, response = "201";
             statusarr = new string[]{ currentMethodName, status, percent, failedval, inputjson, response };
+
         }
         [Test]
         //[Ignore("Ignore Test1")]
