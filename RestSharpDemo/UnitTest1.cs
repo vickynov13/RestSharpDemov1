@@ -143,5 +143,24 @@ namespace RestSharpDemo
         }
 
     }
+    [TestFixture]
+    public class UnitTest3
+    {
+        string[,] values;
+        StringBuilder log = new StringBuilder("Console log: UnitTest1");
+        String[] statusarr;
+        string[,] resultss = { { "Test Method", "Test Status", "Percentage", "Failed Validations", "Input Json", "Response" } };
+        [Test]
+        public void TestMethod5()
+        {
+            string currentMethodName = System.Reflection.MethodBase.GetCurrentMethod().Name;
+            Variables.setdata(currentMethodName, values);
+            String status = "Pass", percent = "50%", failedval = "nothing", inputjson = Variables.InputJson, response = "200";
+            statusarr = new string[] { currentMethodName, status, percent, failedval, inputjson, response };
+        }
 
-}
+    }
+
+
+
+    }
