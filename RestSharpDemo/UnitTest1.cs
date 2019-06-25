@@ -166,7 +166,7 @@ namespace RestSharpDemo
             {
                 expath = string.Concat(expath,path[n],"\\");
             }
-            Console.Write(expath);
+            Console.Write(expath+"\n");
         }
 
     }
