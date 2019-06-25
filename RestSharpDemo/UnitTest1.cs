@@ -157,6 +157,7 @@ namespace RestSharpDemo
             Variables.setdata(currentMethodName, values);
             String status = "Pass", percent = "50%", failedval = "nothing", inputjson = Variables.InputJson, response = "200";
             statusarr = new string[] { currentMethodName, status, percent, failedval, inputjson, response };
+            Console.Write("sa");
         }
 
     }
