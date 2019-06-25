@@ -154,11 +154,19 @@ namespace RestSharpDemo
         public void TestMethod5()
         {
             string currentMethodName = System.Reflection.MethodBase.GetCurrentMethod().Name;
-            Variables.setdata(currentMethodName, values);
             //Variables.setdata(currentMethodName, values);
             String status = "Pass", percent = "50%", failedval = "nothing", inputjson = Variables.InputJson, response = "200";
             statusarr = new string[] { currentMethodName, status, percent, failedval, inputjson, response };
-            Console.Write("sa");
+            string projectDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            string[] path = projectDirectory.Split(new char[] { '\\' });
+            Console.Write(projectDirectory+"\n");
+            Console.Write(path.Length+"\n");
+            String expath = null;
+            for (int n=0;n<path.Length -3; n++)
+            {
+                expath = string.Concat(expath,path[n],"\\");
+            }
+            Console.Write(expath);
         }
 
     }
