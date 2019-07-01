@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Text;
 using Newtonsoft.Json.Linq;
 using NUnit.Framework;
 using RestSharp;
+using RestSharp.Serialization.Json;
 
 namespace RestSharpDemo
 {
@@ -167,7 +169,16 @@ namespace RestSharpDemo
             //Variables.setdata(currentMethodName, values);
             String status = "Pass", percent = "50%", failedval = "nothing", inputjson = Variables.InputJson, response = "200";
             statusarr = new string[] { currentMethodName, status, percent, failedval, inputjson, response };
-            
+            var client = new RestClient("http://my-json-server.typicode.com/vickynov13/repo/");
+            var request = new RestRequest("sales", Method.GET);
+            //request.AddUrlSegment("postid", 2);
+            var responsetm5 = client.Execute(request);
+            //JObject obs = JObject.Parse(responsetm5.Content);
+            var deserialize = new JsonDeserializer();
+            var output = deserialize.Deserialize<Dictionary<String, String>>(responsetm5);
+
+            int rescode = (int)responsetm5.StatusCode;
+            Console.Write(responsetm5.Content);
         }
 
     }
