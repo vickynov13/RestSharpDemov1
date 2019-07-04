@@ -11,13 +11,15 @@ namespace RestSharpDemo
 {
     class ReadExcel
     {
-        public static string[,] getExcelFile()
+        public static string[,] getExcelFile(string dexpath, StringBuilder log)
         {
 
             //Create COM Objects. Create a COM object for everything that is referenced
             Excel.Application xlApp = new Excel.Application();
             Excel.Workbooks xlWorkbooks = xlApp.Workbooks;
-            Excel.Workbook xlWorkbook = xlWorkbooks.Open(@"C:\chrome downloads\testdata.xlsx");
+            dexpath = string.Concat(dexpath, "data\\testdata.xlsx");
+            log.Append("\n" + dexpath);
+            Excel.Workbook xlWorkbook = xlWorkbooks.Open(dexpath);
             Excel._Worksheet xlWorksheet = xlWorkbook.Sheets[1];
             Excel.Range xlRange = xlWorksheet.UsedRange;
             int l = 0, m = 0;

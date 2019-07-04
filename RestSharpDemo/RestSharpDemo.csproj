@@ -101,6 +101,8 @@
     <Compile Include="WriteResultExcel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="data\testdata.csv" />
+    <None Include="data\testdata.xlsx" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -132,9 +134,7 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="NewFolder1\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

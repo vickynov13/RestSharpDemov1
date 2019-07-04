@@ -8,7 +8,7 @@ namespace RestSharpDemo
 {
     public class WriteResultExcel
     {
-        public static void WriteRes(string[,] resultss)
+        public static void WriteRes(string[,] resultss, string rexpath)
         {
             Microsoft.Office.Interop.Excel.Application oXL;
             Microsoft.Office.Interop.Excel._Workbook oWB;
@@ -33,7 +33,7 @@ namespace RestSharpDemo
                 oXL.UserControl = false;
                 string outputFile = "Output_" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".xlsx";
 
-                oWB.SaveAs("c:\\chrome downloads\\" + outputFile, Microsoft.Office.Interop.Excel.XlFileFormat.xlWorkbookDefault, Type.Missing, Type.Missing,
+                oWB.SaveAs(rexpath+@"data\" + outputFile, Microsoft.Office.Interop.Excel.XlFileFormat.xlWorkbookDefault, Type.Missing, Type.Missing,
                     false, false, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlNoChange,
                     Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
 

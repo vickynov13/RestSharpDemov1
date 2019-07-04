@@ -14,6 +14,7 @@ namespace RestSharpDemo
         string[,] values;
         StringBuilder log = new StringBuilder("Console log: UnitTest1");
         String[] statusarr;
+        String expath = null;
         string[,] resultss = { { "Test Method", "Test Status", "Percentage", "Failed Validations", "Input Json", "Response" } };
         [OneTimeSetUp]
         public void InitOT()
@@ -22,21 +23,21 @@ namespace RestSharpDemo
             string[] path = projectDirectory.Split(new char[] { '\\' });
             Console.Write(projectDirectory + "\n");
             Console.Write(path.Length + "\n");
-            String expath = null;
             for (int n = 0; n < path.Length - 3; n++)
             {
                 expath = string.Concat(expath, path[n], "\\");
             }
             Console.Write(expath + "\n");
-            values = ReadExcel.getExcelFile();
-            log.Append("\nin InitOTR");
+            values = ReadExcel.getExcelFile(expath, log);
+            //log.Append("\nin InitOTR");
+            log.Append(expath);
         }
         [OneTimeTearDown]
         public void CleanupOT()
         {
-            WriteResultExcel.WriteRes(resultss);
+            WriteResultExcel.WriteRes(resultss, expath);
             Console.Write(log);
-            System.IO.File.WriteAllText(@"C:\chrome downloads\ConsoleLog_UnitTest1.txt", log.ToString());
+            System.IO.File.WriteAllText(expath+ @"data\ConsoleLog_UnitTest1"+DateTime.Now.ToString("yyyyMMddHHmmss")+".txt", log.ToString());
         }
         [SetUp]
         public void InitRFEM()
@@ -51,7 +52,7 @@ namespace RestSharpDemo
         [Ignore("Ignore Test1")]
         public void TestMethod1()
         {
-            string[,] datass = Readcsv.Loadcsv1("C:\\chrome downloads\\testdata.csv");
+            string[,] datass = Readcsv.Loadcsv1(expath+@"data\testdata.csv");
             foreach (var item in datass)
             {
                 Console.WriteLine(item.ToString());

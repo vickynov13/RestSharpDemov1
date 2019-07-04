@@ -1,0 +1,18 @@
+Test Name,|,Type,|,Ridentifier,|,Rusult To Validate,|,Input Json,|,RIdentifier2,|,Output Json,end
+,|,GET,|,v1/employee/53213,|,"{""name"":""test"",""salary"":""123"",""age"":""23""}",|,,|,,|,,end
+,|,POST,|,v1/post\employee/53213,|,"{""name"":""tes"",""salary"":""33"",""age"":""2""}",|,"{
+ ""name"":""tet"",
+ ""salary"":""13"",
+ ""age"":""3"",
+ ""id"":""19""
+}",|,v1/employee/53213,|,"{
+""name"":""te"",
+""salary"":""23"",
+""age"":""3""
+}",end
+,|,POST,|,v1/post\employee/53213,|,"{""name"":""te"",""salary"":""23"",""age"":""3""}",|,"{
+ ""name"":""tet"",
+ ""salary"":""13"",
+ ""age"":""3"",
+ ""id"":""19""
+}",|,v1/employee/53213,|,,end
