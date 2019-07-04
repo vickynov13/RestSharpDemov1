@@ -8,21 +8,24 @@ namespace RestSharpDemo
 {
     public class Variables
     {
-        public static string meme = "text";
-        public static string MType, Ridentifier, RusultToValidate, InputJson, RIdentifier2, OutputJson;
-
-
+        public static string mdata, MType, Ridentifier, RusultToValidate, InputJson, RIdentifier2, OutputJson;
         public static void setdata(string currentMethodName, string[,] values)
         {
+            
             int arrayrows = values.GetLength(0);
             int arraycolumn = values.GetLength(1);
             for (int i = 0; i < arrayrows; i++)
             {
-                if (values[i, 0].Equals(currentMethodName))
-                {
+                string sheetmethodname = values[i, 0];
+                if (sheetmethodname.Equals(currentMethodName))
+                {            
                     for (int j = 0; j < arraycolumn; j++)
                     {
-                        if (values[0, j].Equals("MType"))
+                        if (values[0, j].Equals("TestName"))
+                        {
+                            mdata = values[i, j];
+                        }
+                        else if(values[0, j].Equals("MType"))
                         {
                             MType = values[i, j];
                         }
@@ -47,7 +50,7 @@ namespace RestSharpDemo
                             OutputJson = values[i, j];
                         }
 
-                    }
+                    }break;
                 }
                 else
                 {
@@ -55,6 +58,7 @@ namespace RestSharpDemo
                     Ridentifier = null;
                     RusultToValidate = null;
                     InputJson = null; RIdentifier2 = null; OutputJson = null;
+                    mdata = null;
                 }
             }
         }

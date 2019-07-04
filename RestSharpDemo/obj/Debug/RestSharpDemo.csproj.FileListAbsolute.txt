@@ -1,6 +1,3 @@
-C:\Users\Vicky\source\repos\RestSharpDemo\RestSharpDemo\obj\Debug\RestSharpDemo.csprojAssemblyReference.cache
-C:\Users\Vicky\source\repos\RestSharpDemo\RestSharpDemo\obj\Debug\RestSharpDemo.csproj.ResolveComReference.cache
-C:\Users\Vicky\source\repos\RestSharpDemo\RestSharpDemo\obj\Debug\RestSharpDemo.csproj.CoreCompileInputs.cache
 C:\Users\Vicky\source\repos\RestSharpDemo\RestSharpDemo\bin\Debug\NUnit3.TestAdapter.dll
 C:\Users\Vicky\source\repos\RestSharpDemo\RestSharpDemo\bin\Debug\NUnit3.TestAdapter.pdb
 C:\Users\Vicky\source\repos\RestSharpDemo\RestSharpDemo\bin\Debug\nunit.engine.dll
@@ -35,6 +32,9 @@ C:\Users\Vicky\source\repos\RestSharpDemo\RestSharpDemo\bin\Debug\System.Threadi
 C:\Users\Vicky\source\repos\RestSharpDemo\RestSharpDemo\bin\Debug\System.ValueTuple.xml
 C:\Users\Vicky\source\repos\RestSharpDemo\RestSharpDemo\bin\Debug\TechTalk.SpecFlow.pdb
 C:\Users\Vicky\source\repos\RestSharpDemo\RestSharpDemo\bin\Debug\Utf8Json.xml
+C:\Users\Vicky\source\repos\RestSharpDemo\RestSharpDemo\obj\Debug\RestSharpDemo.csproj.ResolveComReference.cache
+C:\Users\Vicky\source\repos\RestSharpDemo\RestSharpDemo\obj\Debug\RestSharpDemo.csproj.CoreCompileInputs.cache
 C:\Users\Vicky\source\repos\RestSharpDemo\RestSharpDemo\obj\Debug\RestSharpDemo.csproj.CopyComplete
 C:\Users\Vicky\source\repos\RestSharpDemo\RestSharpDemo\obj\Debug\RestSharpDemo.dll
 C:\Users\Vicky\source\repos\RestSharpDemo\RestSharpDemo\obj\Debug\RestSharpDemo.pdb
+C:\Users\Vicky\source\repos\RestSharpDemo\RestSharpDemo\obj\Debug\RestSharpDemo.csprojAssemblyReference.cache

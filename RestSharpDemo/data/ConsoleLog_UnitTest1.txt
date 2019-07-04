@@ -1,3 +1,0 @@
-Console log: UnitTest1
-C:\Users\Vicky\source\repos\RestSharpDemo\RestSharpDemo\data\testdata.xlsx
-in InitOTRC:\Users\Vicky\source\repos\RestSharpDemo\RestSharpDemo\
